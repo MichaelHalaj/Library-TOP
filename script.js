@@ -1,3 +1,5 @@
+const addButton = document.querySelector('.add-book');
+const library = document.querySelector('.library');
 const myLibrary = [];
 
 function Book(author, title, pages, read) {
@@ -8,6 +10,9 @@ function Book(author, title, pages, read) {
   this.read = read;
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(author, title, pages, read) {
   // do stuff here
+  myLibrary.push(new Book(author, title, pages, read));
 }
+
+

@@ -36,8 +36,6 @@ html {
   outline: none;
   border: none;
 }
-.add-book svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hide {
+  display: none;
 }
