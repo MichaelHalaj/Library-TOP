@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,
+html{
+    --rose: #f43f5e;
+    --slate: #f8fafc;
+    --light-rose: #fecdd3;
+    background-color: var(--slate);
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+
+}
+.title{
+    font-size: 32px;
+}
+.sidebar{
+    flex: 1;
+    background-color: var(--rose);
+}
+.library{
+    flex: 3;
+}
