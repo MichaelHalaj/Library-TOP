@@ -27,9 +27,9 @@ html {
   flex: 3;
 }
 .add-book {
-  height: var(--button-size);
+ /* height: var(--button-size);
   width: var(--button-size);
-  background-color: var(--rose);
+  background-color: var(--rose);*/
   cursor: pointer;
 
   position: fixed;
@@ -47,6 +47,7 @@ form {
   background-color: var(--light-rose);
   border-radius: 12px;
   box-shadow: 5px 5px 5px var(--shadow);
+  width: 300px;
 }
 fieldset div:first-child {
   display: flex;
@@ -69,4 +70,16 @@ fieldset {
   top: 0;
   right: 0;
   cursor: pointer;
+}
+input[type="text"],
+input[type="number"]{
+  width: 90%;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(236, 236, 236);
+  padding-left: 12px;
+}
+input[type="text"]:focus-visible,
+input[type="number"]:focus-visible{
+  outline: 2px solid var(--slate);
 }
