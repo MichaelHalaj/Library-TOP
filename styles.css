@@ -12,6 +12,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
+  width: 100vw;
 }
 .title {
   font-size: 32px;
@@ -41,5 +42,7 @@ html {
 }
 form{
   position: absolute;
-  margin-left: auto;
+  top: 30%;
+  left: 50%;
+  
 }
