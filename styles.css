@@ -40,9 +40,8 @@ html {
 .hide {
   display: none;
 }
-form{
+form {
   position: absolute;
   top: 30%;
   left: 50%;
-  
 }
