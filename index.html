@@ -17,7 +17,7 @@
     </div>
 
     <div class="library">
-      <form action="" class="hide">
+      <form action="" id="book-form" class="hide">
         <fieldset>
           <div class="row">
             <h1>Enter Information about the Book.</h1>
@@ -39,11 +39,13 @@
           </div>
           <div class="row">
             <label for="read">I have read it</label>
-            <input type="radio" id="read" name="read-status" />
+            <input type="radio" id="read" name="read-status" required/>
             <label for="not-read">I have not read it.</label>
             <input type="radio" id="not-read" name="read-status" />
           </div>
         </fieldset>
+        <input type="submit" form="book-form" value="Add Book">
+
       </form>
     </div>
     <button class="add-book">

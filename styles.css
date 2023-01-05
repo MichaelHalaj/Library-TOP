@@ -42,8 +42,7 @@ html {
 }
 form {
   position: absolute;
-  top: 30%;
-  left: 50%;
+  margin: auto;
 }
 fieldset div:first-child{
   display: flex;
