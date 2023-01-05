@@ -20,6 +20,6 @@ function addBookToLibrary(author, title, pages, read) {
 addButton.addEventListener("click", () => {
   form.classList.remove("hide");
 });
-closeButton.addEventListener("click", ()=>{
+closeButton.addEventListener("click", () => {
   form.classList.add("hide");
-})
+});
