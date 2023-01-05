@@ -2,6 +2,7 @@ const addButton = document.querySelector(".add-book");
 const library = document.querySelector(".library");
 const form = document.querySelector("form");
 const closeButton = document.querySelector(".close");
+const submit = document.querySelector("#submit")
 const myLibrary = [];
 
 function Book(author, title, pages, read) {
@@ -22,4 +23,18 @@ addButton.addEventListener("click", () => {
 });
 closeButton.addEventListener("click", () => {
   form.classList.add("hide");
+});
+submit.addEventListener("click", (e)=>{
+  /* e.preventDefault(); */
+  console.log(e);
+  const card = document.createElement("div");
+  const title = document.querySelector("#book-title");
+  const author = document.querySelector("#author");
+  const pages = document.querySelector("#pages");
+  const read = document.querySelector("input[name='read-status']:checked");
+  console.log(author.value);
+  console.log(title.value);
+  console.log(pages.value);
+  console.log(read.id);
+  e.preventDefault();
 });
