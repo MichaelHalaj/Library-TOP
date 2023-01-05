@@ -17,19 +17,25 @@
     </div>
 
     <div class="library">
-        <form action="" class="hide">
+        <form action="" class="display">
             <fieldset>
                 <div class="row">
-
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
                 </div>
                 <div class="row">
-
+                    <label for="author">Author</label>
+                    <input type="text" id="author" required>
                 </div>
                 <div class="row">
-
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages" required>
                 </div>
                 <div class="row">
-                    
+                    <label for="read">I have read it</label>
+                    <input type="radio" id="read" name="read-status">
+                    <label for="not-read">I have not read it.</label>
+                    <input type="radio" id="not-read" name="read-status">
                 </div>
             </fieldset>
             

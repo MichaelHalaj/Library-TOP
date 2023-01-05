@@ -39,3 +39,7 @@ html {
 .hide {
   display: none;
 }
+form{
+  position: absolute;
+  margin-left: auto;
+}
