@@ -45,3 +45,9 @@ form {
   top: 30%;
   left: 50%;
 }
+fieldset div:first-child{
+  display: flex;
+}
+.close{
+  margin-left: auto;
+}
