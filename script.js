@@ -84,6 +84,7 @@ addButton.addEventListener("click", () => {
 });
 closeButton.addEventListener("click", () => {
   form.classList.add("hide");
+  clearForm();
 });
 submit.addEventListener("click", (e) => {
   e.preventDefault();
