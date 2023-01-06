@@ -13,50 +13,50 @@
   </head>
   <body>
     <div class="sidebar">
-      <div class="title">My Library</div>
-      <div class="description">
-        Store a collection of books that you would like to read or have read.
-      </div>
+        <div class="title">My Library</div>
+        <div class="description">
+          Store a collection of books that you would like to read or have read.
+        </div>
     </div>
+    <form action="" id="book-form" class="hide">
+      <fieldset>
+        <div class="row">
+          <h1>Add New Book</h1>
+          <svg
+            class="close"
+            style="width: 24px; height: 24px"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z"
+            />
+          </svg>
+        </div>
+        <div class="row">
+          <label for="book-title">Title</label>
+          <input type="text" id="book-title" required />
+        </div>
+        <div class="row">
+          <label for="author">Author</label>
+          <input type="text" id="author" required />
+        </div>
+        <div class="row">
+          <label for="pages">Pages</label>
+          <input type="number" id="pages" required />
+        </div>
+        <div class="row">
+          <input type="radio" id="read" name="read-status" required />
+          <label for="read">I have read it</label>
+          <input type="radio" id="not-read" name="read-status" />
 
+          <label for="not-read">I have not read it.</label>
+        </div>
+      </fieldset>
+      <input type="submit" id="submit" form="book-form" value="Add Book" />
+    </form>
     <div class="library">
-      <form action="" id="book-form" class="hide">
-        <fieldset>
-          <div class="row">
-            <h1>Add New Book</h1>
-            <svg
-              class="close"
-              style="width: 24px; height: 24px"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill="currentColor"
-                d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22C17.53,22 22,17.53 22,12C22,6.47 17.53,2 12,2M14.59,8L12,10.59L9.41,8L8,9.41L10.59,12L8,14.59L9.41,16L12,13.41L14.59,16L16,14.59L13.41,12L16,9.41L14.59,8Z"
-              />
-            </svg>
-          </div>
-          <div class="row">
-            <label for="book-title">Title</label>
-            <input type="text" id="book-title" required />
-          </div>
-          <div class="row">
-            <label for="author">Author</label>
-            <input type="text" id="author" required />
-          </div>
-          <div class="row">
-            <label for="pages">Pages</label>
-            <input type="number" id="pages" required />
-          </div>
-          <div class="row">
-            <input type="radio" id="read" name="read-status" required />
-            <label for="read">I have read it</label>
-            <input type="radio" id="not-read" name="read-status" />
-
-            <label for="not-read">I have not read it.</label>
-          </div>
-        </fieldset>
-        <input type="submit" id="submit" form="book-form" value="Add Book" />
-      </form>
+      
     </div>
     <svg
       class="add-book"
