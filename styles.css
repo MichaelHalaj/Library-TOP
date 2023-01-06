@@ -104,18 +104,18 @@ input[type="number"]:focus-visible {
   position: relative;
   border-radius: 12px;
   box-shadow: 5px 5px 5px #9e9e9e;
-  display:flex;
+  display: flex;
   flex-direction: column;
 }
-.card .margin{
+.card .margin {
   width: 100%;
   height: 40px;
   border-radius: 12px 12px 0 0;
 }
-.card .margin.read{
+.card .margin.read {
   background-color: #a3e635;
 }
-.card .margin.not-read{
+.card .margin.not-read {
   background-color: #ef4444;
 }
 .card .content {
@@ -124,9 +124,9 @@ input[type="number"]:focus-visible {
   flex-direction: column;
   font-size: 1.5em;
   inline-size: 75%;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
 }
-.delete{
+.delete {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -136,7 +136,7 @@ input[type="number"]:focus-visible {
   background-size: 24px 24px;
   cursor: pointer;
 }
-.error{
+.error {
   font-size: 0.7em;
   color: #dc2626;
 }
