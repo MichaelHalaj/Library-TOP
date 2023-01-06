@@ -86,3 +86,11 @@ input[type="text"]:focus-visible,
 input[type="number"]:focus-visible{
   outline: 2px solid var(--slate);
 }
+.card{
+  display: flex;
+  background-color: #e2e8f0;
+}
+.card .content{
+  display: flex;
+  flex-direction: column;
+}

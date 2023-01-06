@@ -25,16 +25,19 @@ closeButton.addEventListener("click", () => {
   form.classList.add("hide");
 });
 submit.addEventListener("click", (e)=>{
-  /* e.preventDefault(); */
-  console.log(e);
+  e.preventDefault();
   const card = document.createElement("div");
+  card.classList.add("card");
+  const content = document.createElement("div");
+  card.classList.add('content');
   const title = document.querySelector("#book-title");
   const author = document.querySelector("#author");
   const pages = document.querySelector("#pages");
   const read = document.querySelector("input[name='read-status']:checked");
-  console.log(author.value);
-  console.log(title.value);
-  console.log(pages.value);
-  console.log(read.id);
-  e.preventDefault();
+  addBookToLibrary(author, title, pages, read === 'read');
+  content.innerHTML=`<div>${title.value}</div>
+  <div>${author.value}</div>`;
+  card.appendChild(content);
+  library.appendChild(card);
+
 });
