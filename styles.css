@@ -14,12 +14,12 @@ html {
   flex-wrap: wrap;
   height: 100%;
   width: 100vw;
-  font-family: 'Lato', sans-serif;;
+  font-family: "Lato", sans-serif;
 }
 .title,
 h1 {
   font-size: 32px;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 .sidebar {
   flex: 1;
@@ -27,10 +27,15 @@ h1 {
   position: sticky;
 }
 .library {
-  flex: 3;
+  flex: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+  justify-content: flex-start;
 }
 .add-book {
- /* height: var(--button-size);
+  /* height: var(--button-size);
   width: var(--button-size);
   background-color: var(--rose);*/
   cursor: pointer;
@@ -75,7 +80,7 @@ fieldset {
   cursor: pointer;
 }
 input[type="text"],
-input[type="number"]{
+input[type="number"] {
   width: 90%;
   border: none;
   border-radius: 12px;
@@ -83,14 +88,16 @@ input[type="number"]{
   padding-left: 12px;
 }
 input[type="text"]:focus-visible,
-input[type="number"]:focus-visible{
+input[type="number"]:focus-visible {
   outline: 2px solid var(--slate);
 }
-.card{
+.card {
   display: flex;
   background-color: #e2e8f0;
+  width: 200px; 
 }
-.card .content{
+.card .content {
   display: flex;
   flex-direction: column;
+  font-size: 1.5em;
 }
