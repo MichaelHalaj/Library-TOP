@@ -36,14 +36,19 @@ submit.addEventListener("click", (e) => {
 
   const content = document.createElement("div");
   content.classList.add("content");
+
+  const margin = document.createElement("div");
   const title = document.querySelector("#book-title");
   const author = document.querySelector("#author");
   const pages = document.querySelector("#pages");
   const read = document.querySelector("input[name='read-status']:checked");
   addBookToLibrary(author, title, pages, read === "read");
+  margin.classList.add("margin");
+  margin.classList.add(read.id);
   content.innerHTML = `<div>${title.value}</div>
   <div>${author.value}</div>
   <div>${pages.value} Pages</div>`;
+  card.append(margin);
   card.appendChild(content);
   card.appendChild(deleteBook);
   library.appendChild(card);
