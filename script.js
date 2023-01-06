@@ -57,25 +57,27 @@ function createCard(){
   const content = document.createElement("div");
   content.classList.add("content");
 
-
   const title = document.querySelector("#book-title");
   const author = document.querySelector("#author");
   const pages = document.querySelector("#pages");
   const read = document.querySelector("input[name='read-status']:checked");
-  validateForm(author, title, pages, read);
-  addBookToLibrary(author, title, pages, read === "read");
+  if(validateForm(author, title, pages, read)){
+    addBookToLibrary(author, title, pages, read === "read");
   
-  const margin = document.createElement("div");
-  margin.classList.add("margin");
-  margin.classList.add(read.id);
+    const margin = document.createElement("div");
+    margin.classList.add("margin");
+    margin.classList.add(read.id);
+  
+    content.innerHTML = `<div>${title.value}</div>
+    <div>${author.value}</div>
+    <div>${pages.value} Pages</div>`;
+    card.append(margin);
+    card.appendChild(content);
+    card.appendChild(deleteBook);
+    library.appendChild(card);
+    clearForm();
+  }
 
-  content.innerHTML = `<div>${title.value}</div>
-  <div>${author.value}</div>
-  <div>${pages.value} Pages</div>`;
-  card.append(margin);
-  card.appendChild(content);
-  card.appendChild(deleteBook);
-  library.appendChild(card);
 }
 addButton.addEventListener("click", () => {
   form.classList.remove("hide");
@@ -86,5 +88,5 @@ closeButton.addEventListener("click", () => {
 submit.addEventListener("click", (e) => {
   e.preventDefault();
   createCard();
-  clearForm();
+
 });
