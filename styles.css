@@ -98,14 +98,19 @@ input[type="number"]:focus-visible {
 }
 .card {
   background-color: #e2e8f0;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   position: relative;
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px #9e9e9e;
 }
 .card .content {
   display: flex;
+  padding: 30px 12px 12px 12px;
   flex-direction: column;
   font-size: 1.5em;
+  inline-size: 75%;
+  overflow-wrap: break-word; 
 }
 .delete{
   position: absolute;
