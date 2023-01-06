@@ -97,7 +97,7 @@ input[type="number"]:focus-visible {
 }
 .card {
   background-color: #e2e8f0;
-  width: 200px; 
+  width: 200px;
   height: 200px;
 }
 .card .content {
