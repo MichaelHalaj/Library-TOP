@@ -31,6 +31,9 @@ submit.addEventListener("click", (e) => {
   e.preventDefault();
   const card = document.createElement("div");
   card.classList.add("card");
+  const deleteBook = document.createElement("div");
+  deleteBook.classList.add("delete");
+
   const content = document.createElement("div");
   content.classList.add("content");
   const title = document.querySelector("#book-title");
@@ -42,6 +45,7 @@ submit.addEventListener("click", (e) => {
   <div>${author.value}</div>
   <div>${pages.value} Pages</div>`;
   card.appendChild(content);
+  card.appendChild(deleteBook);
   library.appendChild(card);
   clearForm();
 });

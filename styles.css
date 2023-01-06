@@ -53,6 +53,7 @@ h1 {
 }
 form {
   position: fixed;
+  z-index: 1;
   top: 25%;
   left: 35%;
   /*margin: auto;*/
@@ -99,9 +100,20 @@ input[type="number"]:focus-visible {
   background-color: #e2e8f0;
   width: 200px;
   height: 200px;
+  position: relative;
 }
 .card .content {
   display: flex;
   flex-direction: column;
   font-size: 1.5em;
+}
+.delete{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: url("icons/trash-can-outline.svg");
+  background-size: 24px 24px;
+  cursor: pointer;
 }
