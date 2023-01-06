@@ -102,6 +102,19 @@ input[type="text"]:focus-visible,
 input[type="number"]:focus-visible {
   outline: 2px solid var(--slate);
 }
+input[type="submit"]{
+  margin: 16px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+
+}
+input[type="submit"]:hover{
+
+}
 .card {
   background-color: #e2e8f0;
   width: 300px;
@@ -114,7 +127,7 @@ input[type="number"]:focus-visible {
 }
 .card .margin {
   width: 100%;
-  height: 40px;
+  min-height: 40px;
   border-radius: 12px 12px 0 0;
 }
 .card .margin.read {
@@ -128,8 +141,9 @@ input[type="number"]:focus-visible {
   padding: 12px 12px 12px 12px;
   flex-direction: column;
   font-size: 1.5em;
-  inline-size: 75%;
+  inline-size: 90%;
   overflow-wrap: break-word;
+  overflow: auto;
 }
 .delete {
   position: absolute;
