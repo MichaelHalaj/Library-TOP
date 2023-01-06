@@ -17,7 +17,10 @@ function addBookToLibrary(author, title, pages, read) {
   // do stuff here
   myLibrary.push(new Book(author, title, pages, read));
 }
-
+function clearForm(){
+  form.classList.add("hide");
+  form.reset();
+}
 addButton.addEventListener("click", () => {
   form.classList.remove("hide");
 });
@@ -36,8 +39,9 @@ submit.addEventListener("click", (e)=>{
   const read = document.querySelector("input[name='read-status']:checked");
   addBookToLibrary(author, title, pages, read === 'read');
   content.innerHTML=`<div>${title.value}</div>
-  <div>${author.value}</div>`;
+  <div>${author.value}</div>
+  <div>${pages.value} Pages</div>`;
   card.appendChild(content);
   library.appendChild(card);
-
+  clearForm();
 });
