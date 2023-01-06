@@ -18,17 +18,18 @@ function addBookToLibrary(author, title, pages, read) {
   // do stuff here
   myLibrary.push(new Book(author, title, pages, read));
 }
-function clearForm() {
+function clearErrors(){
   for(let i = 0; i < errors.length; i+=1){
     errors[i].classList.add("hide");
   }
+}
+function clearForm() {
+  clearErrors();
   form.classList.add("hide");
   form.reset();
 }
 function validateForm(author, title, pages, read){
-  console.log(author.value === '');
-  console.log(title.value);
-  console.log(pages.value);
+  clearErrors();
   let hasNoErrors = true;
   if(author.value === ""){
     const authorError = document.querySelector('.author-error');
