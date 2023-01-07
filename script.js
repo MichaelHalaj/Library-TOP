@@ -82,12 +82,6 @@ function createCard(){
   notReadButton.classList.add('not-read');
   notReadButton.innerText = "Have Not Read";
 
-  readButton.addEventListener('click', ()=>{
-    myLibrary[card.id].read = true;
-    console.table(myLibrary);
-  });
-  buttons.appendChild(readButton);
-  buttons.appendChild(notReadButton);
 
   const title = document.querySelector("#book-title");
   const author = document.querySelector("#author");
@@ -102,10 +96,26 @@ function createCard(){
     const margin = document.createElement("div");
     margin.classList.add("margin");
     margin.classList.add(read.id);
+    
+    readButton.addEventListener('click', ()=>{
+      myLibrary[card.id].read = true;
+      margin.classList.remove('not-read');
+      margin.classList.add('read');
+      console.table(myLibrary);
+    });
   
+    notReadButton.addEventListener('click', ()=>{
+      myLibrary[card.id].read = false;
+      margin.classList.add('not-read');
+      margin.classList.remove('read');
+      console.table(myLibrary);
+    });
+
     content.innerHTML = `<div>${title.value}</div>
     <div>${author.value}</div>
     <div>${pages.value} Pages</div>`;
+    buttons.appendChild(readButton);
+    buttons.appendChild(notReadButton);
     card.append(margin);
     card.appendChild(content);
     card.appendChild(deleteBook);
