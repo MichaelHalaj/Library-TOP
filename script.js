@@ -113,9 +113,9 @@ function createCard() {
       margin.classList.remove("read");
     });
 
-    content.innerHTML = `<div>${title.value}</div>
-    <div>${author.value}</div>
-    <div>${pages.value} Pages</div>`;
+    content.innerHTML = `<div>Title:</div><div>${title.value}</div>
+    <div>Author:</div><div>${author.value}</div>
+    <div>Number of Pages:</div><div>${pages.value} Pages</div>`;
     buttons.appendChild(readButton);
     buttons.appendChild(notReadButton);
     card.append(margin);

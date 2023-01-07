@@ -11,26 +11,34 @@ html {
   --button-size: 100px;
   background-color: var(--slate);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /*flex-wrap: wrap;*/
   height: 100vh;
   width: 100vw;
   font-family: "Lato", sans-serif;
 }
 .title,
 h1 {
-  font-size: 32px;
+  font-size: 72px;
   font-family: "Oswald", sans-serif;
 }
 .header {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: 20px;
 }
 .sidebar {
+  z-index: 1;
   flex: 1;
-  background-color: var(--rose);
+  background-color: grey;
+  box-shadow: 5px 5px 5px rgba(148, 148, 148, 0.5);
   position: sticky;
   top: 0;
+}
+.description{
+  margin-left: 20px;
+  padding: 8px;
 }
 .library {
   flex: 4;
@@ -55,6 +63,9 @@ h1 {
 }
 .hide {
   display: none;
+}
+.row h1{
+  font-size: 32px;
 }
 form {
   position: fixed;
@@ -186,4 +197,8 @@ input[type="submit"]:hover {
   margin: 8px;
   margin-top: auto;
   gap: 16px;
+}
+.content>div:nth-child(odd){
+  font-size: 0.5em;
+  border-bottom: 1px rgb(95, 95, 95) solid;
 }
