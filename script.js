@@ -75,9 +75,17 @@ function createCard(){
   const notReadButton = document.createElement("button");
 
   readButton.classList.add('read-buttons');
-  notReadButton.classList.add('read-buttons');
+  readButton.classList.add('read');
   readButton.innerText = "Have Read";
+
+  notReadButton.classList.add('read-buttons');
+  notReadButton.classList.add('not-read');
   notReadButton.innerText = "Have Not Read";
+
+  readButton.addEventListener('click', ()=>{
+    myLibrary[card.id].read = true;
+    console.table(myLibrary);
+  });
   buttons.appendChild(readButton);
   buttons.appendChild(notReadButton);
 
@@ -86,7 +94,7 @@ function createCard(){
   const pages = document.querySelector("#pages");
   const read = document.querySelector("input[name='read-status']:checked");
   if(validateForm(author, title, pages, read)){
-    addBookToLibrary(lastBookIdx, author, title, pages, read === "read");
+    addBookToLibrary(lastBookIdx, author.value, title.value, pages.value, read === "read");
     console.table(myLibrary);
     deleteBook.addEventListener('click', ()=>{
       removeBook(card.id);
