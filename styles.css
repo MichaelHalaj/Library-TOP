@@ -96,14 +96,15 @@ input[type="number"] {
   border: none;
   border-radius: 12px;
   background-color: rgb(236, 236, 236);
-  padding-left: 12px;
+  padding-left: 8px;
 }
 input[type="text"]:focus-visible,
 input[type="number"]:focus-visible {
-  outline: 2px solid var(--slate);
+  outline: 2px solid black;
 }
 input[type="submit"]{
-  margin: 16px;
+  /*margin: 16px;*/
+  margin: 8px;
   font-size: 1.2em;
   border: none;
   border-radius: 25px;
