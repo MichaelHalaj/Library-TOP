@@ -70,6 +70,17 @@ function createCard(){
   const content = document.createElement("div");
   content.classList.add("content");
 
+  const buttons = document.createElement("div");
+  const readButton = document.createElement("button");
+  const notReadButton = document.createElement("button");
+
+  readButton.classList.add('read-buttons');
+  notReadButton.classList.add('read-buttons');
+  readButton.innerText = "Have Read";
+  notReadButton.innerText = "Have Not Read";
+  buttons.appendChild(readButton);
+  buttons.appendChild(notReadButton);
+
   const title = document.querySelector("#book-title");
   const author = document.querySelector("#author");
   const pages = document.querySelector("#pages");
@@ -90,6 +101,7 @@ function createCard(){
     card.append(margin);
     card.appendChild(content);
     card.appendChild(deleteBook);
+    card.appendChild(buttons);
     library.appendChild(card);
 
     // eslint-disable-next-line no-plusplus

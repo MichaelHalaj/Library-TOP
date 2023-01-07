@@ -160,3 +160,11 @@ input[type="submit"]:hover{
   font-size: 0.7em;
   color: #dc2626;
 }
+.read-buttons{
+  border-radius: 24px;
+  cursor: pointer;
+  border: none;
+  padding: 8px 16px;
+  font-family: "Lato", sans-serif;
+}
+
