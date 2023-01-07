@@ -101,14 +101,12 @@ function createCard(){
       myLibrary[card.id].read = true;
       margin.classList.remove('not-read');
       margin.classList.add('read');
-      console.table(myLibrary);
     });
   
     notReadButton.addEventListener('click', ()=>{
       myLibrary[card.id].read = false;
       margin.classList.add('not-read');
       margin.classList.remove('read');
-      console.table(myLibrary);
     });
 
     content.innerHTML = `<div>${title.value}</div>
