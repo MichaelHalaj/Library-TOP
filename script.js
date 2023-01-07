@@ -46,6 +46,11 @@ function validateForm(author, title, pages, read) {
     pageError.classList.remove("hide");
     hasNoErrors = false;
   }
+  if(!read){
+    const radioError = document.querySelector(".radio-error");
+    radioError.classList.remove("hide");
+    hasNoErrors = false;
+  }
   return hasNoErrors;
 }
 function removeBook(bookID) {
