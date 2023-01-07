@@ -21,7 +21,7 @@ h1 {
   font-size: 32px;
   font-family: "Oswald", sans-serif;
 }
-.header{
+.header {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -102,7 +102,7 @@ input[type="text"]:focus-visible,
 input[type="number"]:focus-visible {
   outline: 2px solid black;
 }
-input[type="submit"]{
+input[type="submit"] {
   /*margin: 16px;*/
   margin: 8px;
   font-size: 1.2em;
@@ -111,10 +111,8 @@ input[type="submit"]{
   padding: 8px 16px;
   cursor: pointer;
   font-family: "Oswald", sans-serif;
-
 }
-input[type="submit"]:hover{
-
+input[type="submit"]:hover {
 }
 .card {
   background-color: #e2e8f0;
@@ -160,7 +158,7 @@ input[type="submit"]:hover{
   font-size: 0.7em;
   color: #dc2626;
 }
-.read-buttons{
+.read-buttons {
   border-radius: 24px;
   cursor: pointer;
   border: none;
@@ -169,13 +167,19 @@ input[type="submit"]:hover{
   font-size: 0.7em;
   width: 120px;
 }
-.read{
+.read {
   background-color: #a3e635;
 }
-.not-read{
+.not-read {
   background-color: #ef4444;
 }
-.card>div:last-child{
+.read:hover {
+  background-color: #83b92b;
+}
+.not-read:hover {
+  background-color: #bb3535;
+}
+.card > div:last-child {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -183,4 +187,3 @@ input[type="submit"]:hover{
   margin-top: auto;
   gap: 16px;
 }
-
