@@ -6,12 +6,46 @@ const submit = document.querySelector("#submit");
 const errors = document.querySelectorAll(".error");
 const myLibrary = [];
 let lastBookIdx = 0;
-function Book(author, title, pages, read) {
-  // the constructor...
-  this.author = author;
-  this.title = title;
-  this.pages = pages;
-  this.read = read;
+
+class Book{
+  constructor(author, title, pages, read){
+    this.author = author;
+    this.title = title;
+    this.pages = pages;
+    this.read = read;
+  }
+
+  get author(){
+    return this._author;
+  }
+
+  set author(value){
+    this._author = value;
+  }
+
+  get title(){
+    return this._title;
+  }
+  
+  set title(value){
+    this._title = value
+  }
+
+  get pages(){
+    return this._pages;
+  }
+
+  set pages(value){
+    this._pages = value;
+  }
+
+  get read(){
+    return this._read;
+  }
+
+  set read(value){
+    this._read = value;
+  }
 }
 
 function addBookToLibrary(author, title, pages, read) {
@@ -93,7 +127,6 @@ function createCard() {
   const read = document.querySelector("input[name='read-status']:checked");
   if (validateForm(author, title, pages, read)) {
     addBookToLibrary(
-      lastBookIdx,
       author.value,
       title.value,
       pages.value,
